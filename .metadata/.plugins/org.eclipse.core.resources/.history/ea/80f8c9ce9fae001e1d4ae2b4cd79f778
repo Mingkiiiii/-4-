@@ -1,0 +1,42 @@
+package practice;
+
+import java.util.Scanner;
+
+public class Practice4 {
+
+	public static void main(String[] args) {
+		//1 ~ 50 사이의 랜덤함 수 생성
+		int chance = 5;
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("1~50 사이의 숫자를 맞춰보세요!");
+		while(true) {
+			int randInt = (int)(Math.random()*50+1);
+			if(chance == 0) {
+				break;
+			}
+		}
+			while(0>chance) {
+				System.out.print("숫자를 입력해주세요 : ");
+	            int guess = scanner.nextInt();
+
+	            if (guess == randInt) {
+	                System.out.println("정답입니다!");
+	                break;
+	            } else if (guess < randInt) {
+	                System.out.println("업!! 기회가 " + --chance + "번 남았습니다.");
+	            } else {
+	                System.out.println("다운!! 기회가 " + --chance + "번 남았습니다.");
+	            }
+
+	            if (chance == 0) {
+	                System.out.println("실패하였습니다. 정답은 " + randInt + "입니다.");
+	            }
+			}
+			 
+	        }
+			
+		}
+
+	
+
+

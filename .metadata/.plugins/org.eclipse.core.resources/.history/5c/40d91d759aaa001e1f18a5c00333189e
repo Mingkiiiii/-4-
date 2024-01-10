@@ -1,0 +1,15 @@
+package ch05_controll;
+
+public class conditional {
+
+	public static void main(String[] args) {
+		int price = 30000;
+		int myMoney = 10000;
+		//조건문 if문
+		if (myMoney < price) {
+			System.out.println("돈이 부족함.");
+		}
+		System.out.println("==");
+	}
+
+}

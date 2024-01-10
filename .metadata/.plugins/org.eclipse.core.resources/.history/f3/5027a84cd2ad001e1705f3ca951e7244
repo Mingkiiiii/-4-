@@ -1,0 +1,48 @@
+package practice;
+
+public class JavaBasicProblem03 {
+    public static void main(String[] args) {
+    	int totalDegrees = 5834; 
+        int degreesPerCircle = 360; 
+        int finalDegree = calculateFinalDegree(totalDegrees, degreesPerCircle); 
+        String prize = determinePrize(finalDegree); 
+
+       
+        System.out.println("룰렛은 총 " + (totalDegrees / degreesPerCircle) + "바퀴 돌았고, 멈춘 각도는 " + finalDegree + "도로, 경품은 " + prize + "입니다.");
+
+    	    
+    	    public static int calculateFinalDegree(int totalDegrees, int degreesPerCircle) {
+    	        if (totalDegrees < degreesPerCircle) {
+    	            return totalDegrees;
+    	        } else {
+    	            return calculateFinalDegree(totalDegrees - degreesPerCircle, degreesPerCircle);
+    	        }
+    	    }
+    	    
+
+    	   
+    	    public static String determinePrize(int finalDegree) {
+    	        if (finalDegree >= 0 && finalDegree < 60) {
+    	            return "사탕";
+    	        } else if (finalDegree >= 60 && finalDegree < 120) {
+    	            return "초콜릿";
+    	        } else if (finalDegree >= 120 && finalDegree < 180) {
+    	            return "쿠키";
+    	        } else if (finalDegree >= 180 && finalDegree < 240) {
+    	            return "콜라";
+    	        } else if (finalDegree >= 240 && finalDegree < 300) {
+    	            return "아이스크림";
+    	        } else {
+    	            return "커피"; 
+    	        }
+    	    
+
+    	   
+    	}
+
+    	
+        
+        
+      
+    }
+

@@ -1,0 +1,31 @@
+package ch06_method;
+
+public class RecursionMain {
+
+	public static void main(String[] args) {
+		Func(5);
+		System.out.println(factorial(5));
+		System.out.println(factorial(10));
+		System.out.println(factorial(15));
+
+	}
+	//재귀함수
+	public static void Func(int num) {
+		//재귀함수는 멈추는게 중요 (잘못하면 무한루프)
+		if(num == 0) {
+			return;
+		}else {
+			System.out.println("hi");
+			//자신을 호출
+			Func(num -1);
+		}
+	}
+	// factorial
+	public static long factorial(int num) {
+		long sum =1;
+		for(int i=1; i <=num; i++) {
+			sum *=i;
+		}
+		return sum;
+	}
+}

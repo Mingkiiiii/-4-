@@ -1,0 +1,41 @@
+package ch05_controll;
+
+import java.util.Scanner;
+
+public class Loopwhile {
+
+	public static void main(String[] args) {
+		// while(조건) 조건이 true이면 반복(무한루프 조심해야됨.)
+		int i=1;
+		while(i <=10) {
+			System.out.println(i);
+			i++;
+		}
+		int j=1;
+		while(true) {
+			System.out.println(j);
+			j++;
+			if(j==10) {
+				break;
+			}
+		}
+		Scanner scan = new Scanner(System.in);
+		boolean flag = true;
+		while(flag) {
+			System.out.println("==================");
+			System.out.println("이름을 입력하세요(종료 q)");
+			System.out.println(">>> ");
+			String nm = scan.nextLine();
+			if(nm.equals("q")) {
+				flag=false;
+				System.out.println("종료 하겠습니다.");
+				
+			}else {
+				System.out.println(nm + "님 환영합니다.");
+			}
+			System.out.println("==================");
+		}
+
+	}
+
+}

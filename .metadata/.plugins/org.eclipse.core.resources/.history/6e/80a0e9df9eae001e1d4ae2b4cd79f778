@@ -1,0 +1,19 @@
+package practice;
+
+public class Practice4 {
+
+	public static void main(String[] args) {
+		//1 ~ 50 사이의 랜덤함 수 생성
+		int chance = 5;
+		while(true) {
+			int randInt = (int)(Math.random()*50+1);
+			if(chance == 0) {
+				break;
+			}
+			System.out.println(randInt);
+			chance--;
+		}
+
+	}
+
+}

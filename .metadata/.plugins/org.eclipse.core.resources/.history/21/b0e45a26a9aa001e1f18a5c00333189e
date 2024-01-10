@@ -1,0 +1,52 @@
+package ch05_controll;
+
+import java.util.function.BiConsumer;
+
+public class Loopfor {
+
+	public static void main(String[] args) {
+		int num =1;
+		System.out.println(num++);
+		System.out.println(num++);
+		System.out.println(num++);
+		System.out.println(num++);
+		System.out.println(num++);
+		System.out.println(num++);
+		System.out.println("================for문=============");
+		// for문
+		// (1초기화식; 2조건식 ;4증강식
+		for(int i=1; i<=10; i++) {
+			System.out.println(i);
+		}
+		//1 ~ 20까지 더하기
+		int sum = 0;
+		for(int i=1; i<=20; i++) {
+			System.out.println(i);
+			sum +=i;
+		}
+		System.out.println("1 ~ 20을 더하면:" + sum);
+		// 21부터 45까지 더하기
+		int sum2 =0;
+		for(int i =21; i <=45; i++) {
+			sum2 +=i;
+		}
+		System.out.println("21 ~ 45을 더하면" + sum2);
+		// 1부터 40까지중에 짝수만 더한 값을 출력하시오!
+		//1. 1~40 for 작성
+		//2. 조건 짝수일 경우 더하기
+		//3. 최종 출력
+		int sum3= 0;
+		for (int i = 1; i <= 40; i++) {
+		  if (i % 2 == 0) { // 짝수인 경우에만 더하기
+		    sum3 += i;
+		  }
+		}
+		System.out.println("짝수의 합: " + sum3);
+
+		
+		
+		
+
+	}
+
+}

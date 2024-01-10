@@ -1,0 +1,35 @@
+package ch06_method;
+public class Asda {
+
+    public static void printInvertedTree(int currentLevel, int totalLevels) {
+        if (currentLevel >= 0) {
+            printSpaces(totalLevels - currentLevel - 1);
+            printStars(2 * currentLevel + 1);
+            System.out.println(); // 다음 줄로 넘어갑니다.
+            printInvertedTree(currentLevel - 1, totalLevels); // 다음 층을 출력하기 위해 재귀 호출
+        }
+    }
+
+    public static void printSpaces(int count) {
+        if (count > 0) {
+            System.out.print(" ");
+            printSpaces(count - 1); // 공백을 하나 줄이고 재귀 호출
+        }
+    }
+
+    public static void printStars(int count) {
+        if (count > 0) {
+            System.out.print("*");
+            printStars(count - 1); // 별을 하나 줄이고 재귀 호출
+        }
+    }
+
+    public static void main(String[] args) {
+        int treeLevels = 5; // 크리스마스 트리의 총 층수
+        printInvertedTree(treeLevels - 1, treeLevels); // 재귀 함수를 호출하여 뒤집힌 트리를 출력
+    }
+}
+
+
+
+

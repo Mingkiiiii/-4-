@@ -1,0 +1,32 @@
+package practice;
+
+public class JavaBasicProblem03 {
+    public static void main(String[] args) {
+        // if문
+        int example = 278;
+        int sum = 0;
+
+        
+        if (example > 0) {
+            int digit1 = example / 100; // 백의 자리수
+            int digit2 = (example / 10) % 10; // 십의 자리수
+            int digit3 = example % 10; // 일의 자리수
+            
+            sum = digit1 + digit2 + digit3;
+        }
+
+        System.out.println("결과는: " + sum2);
+        
+        // for문
+        int example3 = 278;
+        int sum3 = 0;
+
+       
+        for (int temp = example3; temp > 0; temp /= 10) {
+            int digit = temp % 10; // 현재 자리수
+            sum3 += digit; // 자리수 더하기
+        }
+
+        System.out.println("결과는: " + sum3);
+    }
+}

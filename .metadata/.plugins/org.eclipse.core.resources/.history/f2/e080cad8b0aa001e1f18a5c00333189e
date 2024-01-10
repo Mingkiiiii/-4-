@@ -1,0 +1,24 @@
+package practice;
+
+public class JavaBasicProblem03 {
+
+	public static void main(String[] args) {
+		
+		        int example = 278;
+		        int sum = 0;
+
+		        // 각 자리수를 더하기
+		        while (example > 0) {
+		            int digit = example % 10; // 현재 자리수
+		            sum += digit; // 자리수 더하기
+		            example /= 10; // 다음 자리수로 이동
+		        }
+
+		        System.out.println("결과는: " + sum);
+		    }
+		}
+
+
+	
+
+

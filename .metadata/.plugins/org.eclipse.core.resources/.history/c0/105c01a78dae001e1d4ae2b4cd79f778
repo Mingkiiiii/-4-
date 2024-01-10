@@ -1,0 +1,32 @@
+package ch07_array;
+
+/**
+ * Class Name : ArrayMain
+ * Author :MYEONGGI
+ * Created Date : 2024. 1. 9.
+ * Version      :  1.0
+ * Purpose		: array study
+ * Desciption	: array 선언 및 사용법
+ */
+public class ArrayMain {
+
+	public static void main(String[] args) {
+		String samjang ="삼장";
+		String ogaong ="오공";
+		String saojeong ="사오정";
+		String palgye ="저팔계";
+		//배열(array)
+		// String [] 문자열 배열
+		String [] seoyugi = new String[4]; // 첨자는 배열의 크기(단순array 크기변경X)
+		System.out.println(seoyugi.length); //배열의 길이를 리턴
+		System.out.println(seoyugi[0]); //처음 생성된 배열에는 기본값이 있음
+		//참조타입(String, Object..):null
+		//기본타입(int,boolean..): 숫자이면 0 , boolean이면 false
+		int [] numbers = new int[3];
+		System.out.println(numbers[0]);
+		boolean [] bools = new boolean[5];
+		System.out.println(bools[0]);
+
+	}
+
+}

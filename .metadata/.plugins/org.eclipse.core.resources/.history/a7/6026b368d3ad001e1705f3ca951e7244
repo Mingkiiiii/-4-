@@ -1,0 +1,23 @@
+package ch06_method;
+
+public class Grade {
+
+    public static void grades(String name, int kr, int math, int english) {
+        double average = (double)(kr+ math + english) / 3;
+        char grade;
+
+        if (average >= 90) {
+            grade = 'A';
+        } else if (average >= 80) {
+            grade = 'B';
+        } else {
+            grade = 'C';
+        }
+
+        System.out.printf("%s님의 평균은 %.2f으로 %c등급입니다.\n", name, average, grade);
+    }
+
+    public static void main(String[] args) {
+        grades("홍길동", 82, 76, 91);
+    }
+}

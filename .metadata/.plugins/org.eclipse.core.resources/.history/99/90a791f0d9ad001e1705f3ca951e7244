@@ -1,0 +1,32 @@
+package ch06_method;
+public class Asda {
+
+    public static void printTree(int currentLevel, int totalLevels) {
+        if (currentLevel < totalLevels) {
+            printSpaces(totalLevels - currentLevel - 1);
+            printStars(2 * currentLevel + 1);
+            System.out.println(); 
+            printTree(currentLevel + 1, totalLevels); 
+        }
+    }
+
+    public static void printSpaces(int count) {
+        if (count > 0) {
+            System.out.print(" ");
+            printSpaces(count - 1); 
+        }
+    }
+
+    public static void printStars(int count) {
+        if (count > 0) {
+            System.out.print("*");
+            printStars(count - 1); 
+        }
+    }
+
+    public static void main(String[] args) {
+        int treeLevels = 5; // 크리스마스 트리의 총 층수
+        printTree(0, treeLevels); // 재귀 함수를 호출하여 트리를 출력
+    }
+}
+

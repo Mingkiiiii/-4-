@@ -1,0 +1,24 @@
+package practice;
+
+public class JavaBasicProblem01 {
+
+	public static void main(String[] args) {
+		
+		        String name = "김명기";
+		        int age = 26;
+		        double height = 177.9;
+		        String phone = "010-8751-2894";
+		        String email = "audrl3692@naver.com";
+
+		        System.out.println("이름: " + name);
+		        System.out.println("나이: " + age + "세");
+		        System.out.println("키: " + height + "cm");
+		        System.out.println("연락처: " + phone);
+		        System.out.println("이메일: " + email);
+		    }
+		}
+
+
+	
+
+
